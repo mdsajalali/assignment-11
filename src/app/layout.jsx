@@ -1,8 +1,6 @@
-"use client"
-
 import NavMenu from "../../components/NavMenu";
+import Progress from "../../components/Progress";
 import "./globals.css";
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 export const metadata = {
   title: "Sajal's Blog",
@@ -14,14 +12,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <div className="w-3/6 m-auto">
-        <NavMenu />
-        {children}
+          <NavMenu />
+          {children}
 
-        <ProgressBar
-          height="5px"
-          color="#3B82F6"
-          options={{ showSpinner: false }}
-        />
+          <Progress />
         </div>
       </body>
     </html>
